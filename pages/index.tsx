@@ -26,12 +26,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-white px-10'>
+      <main className='bg-white px-5'>
 
         <section className='min-h-screen font-Cinzel'>
 
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-gray-900 text-xl '>ColorByMyky</h1>
+            <h1 className='text-gray-900 text-xl pr-5'>ColorByMyky</h1>
             <ul className='flex items-center'>
               <a href='#about'><li className='text-gray-900 hover:text-pink-400  text-xl'>About</li></a>
               <a href='#contact'><li className='text-gray-900 px-4 ml-8 hover:text-pink-400 text-xl'>Contact</li></a>
