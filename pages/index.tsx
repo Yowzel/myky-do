@@ -44,10 +44,8 @@ export default function Home() {
               <h2 className='text-xl'>Myky Do</h2>
               <h3 className='text-l'>Hairstylist</h3>
               <p className='leading-8 text-sm'>
-                New Hairstylist specializing in color!
-                New Hairstylist specializing in color!
-                New Hairstylist specializing in color!
-                New Hairstylist specializing in color!
+              Myky's a hair color specialist currently located in Sacramento, California.
+              Having her diploma from Federico's Beauty Institute.
               </p>
             </div>
             <div className=''>
@@ -61,8 +59,13 @@ export default function Home() {
 
               <h3 className='text-l'>Welcome to my portfolio!</h3>
               <h1 className='text-3xl'>Color Specialist</h1>
-              <p className='text-md'>Myky Do is a Color hair specialist currently located in Sacramento, California.
-              Having her diploma from Federicos Beauty Institute.
+              <p className='text-md'>
+              Hi there! Thank you so much for being here. Here is a little bit about me before you book! 
+              My name is Myky (pronounced Mic-key). I’m a mom to two little boys and have been engaged for 
+              five years to this man named Jordan haha. I’ve been in Sac my whole life and I’m so happy to be
+               building my business here. I’ve always love doing hair and everything beauty-related. I can’t 
+               wait to meet you in my chair and for you to walk out feeling beautiful and confident, that is my end 
+               goal! Looking forward to meeting you soon!
               </p>
 
             </div>
@@ -95,6 +98,62 @@ export default function Home() {
 
           </div>
 
+          <div className='flex flex-col text-center justify-center w-full'>
+
+            <div className='mx-auto w-1/2 shadow-lg shadow-pink-300 '>
+            <div className='mt-5'>
+              <h1 className='text-xl'>Pricing</h1>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Babylights/Highlights</h2>
+              <p>Starting $225+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Balayage</h2>
+              <p>Starting $225+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Full Bleach Out</h2>
+              <p>Starting $325+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Root Touch-Up (One Process)</h2>
+              <p>Starting $150+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>One Process Color</h2>
+              <p>Starting $200+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Toner</h2>
+              <p>$75</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Fashion Colors (Vivids)</h2>
+              <p>Starting $325+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Women's Cut</h2>
+              <p>$35</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Men's Haircut</h2>
+              <p>$25</p>
+            </div>
+            </div>
+            
+
+          </div>
+
           <div className='flex justify-center text-7xl text-pink-300 mt-10'>
             <a href="https://www.instagram.com/colorbymyky/?hl=en" target="_blank">
               <AiFillInstagram/>
@@ -104,16 +163,16 @@ export default function Home() {
 
 
           <h1 className='w-full flex justify-center mt-10' id='contact'>Contact me</h1>
-          <form className='flex justify-center my-4' action='https://mailthis.to/giahuyg08@gmail.com' method='POST'>
+          <form className='flex justify-center my-4' action='mailto:ddomyky@gmail.com' method='post' encType='text/plain'>
             <div>
 
-                <input type='text' name='name' className='shadow-lg shadow-pink-300 w-1/2 text-center h-10' placeholder='Your Name'/>
+                <input type='text' name='name' id='name' className='shadow-lg shadow-pink-300 w-1/2 text-center h-10' placeholder='Your Name'/>
 
 
-                <input type='text' name='name' className='shadow-lg shadow-pink-300 w-1/2 text-center h-10' placeholder='Email'/>
+                <input type='text' name='email' id='email' className='shadow-lg shadow-pink-300 w-1/2 text-center h-10' placeholder='Email'/>
 
 
-                <input type='text' name='name' className='shadow-lg shadow-pink-300 w-full text-center h-10' placeholder='About inaquiry'/>
+                <input type='text' name='inquiry' className='shadow-lg shadow-pink-300 w-full text-center h-10' placeholder='About inquiry'/>
 
 
                 <input type='submit' value='send' className='w-full text-center hover:text-pink-600 mt-5 text-xl'/>
