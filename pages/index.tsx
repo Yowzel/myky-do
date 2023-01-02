@@ -98,9 +98,8 @@ export default function Home() {
 
           </div>
 
-          <div className='flex flex-col text-center justify-center w-full'>
+          <div className='flex flex-col text-center w-full'>
 
-            <div className='mx-auto w-1/2 shadow-lg shadow-pink-300 '>
             <div className='mt-5'>
               <h1 className='text-xl'>Pricing</h1>
             </div>
@@ -148,7 +147,6 @@ export default function Home() {
             <div className='mt-5'>
               <h2>Men's Haircut</h2>
               <p>$25</p>
-            </div>
             </div>
             
 
