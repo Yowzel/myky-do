@@ -26,15 +26,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-white px-5'>
+      <main className='bg-gradient-to-br from-white via-stone-300 to-stone-400 px-5'>
 
         <section className='min-h-screen font-Cinzel'>
 
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-gray-900 text-xl pr-5'>ColorByMyky</h1>
             <ul className='flex items-center'>
-              <a href='#about'><li className='text-gray-900 hover:text-pink-400  text-xl'>About</li></a>
-              <a href='#contact'><li className='text-gray-900 px-4 ml-8 hover:text-pink-400 text-xl'>Contact</li></a>
+              <a href='#about'><li className='text-gray-900 hover:text-purple-400  text-xl'>About</li></a>
+              <a href='#contact'><li className='text-gray-900 px-4 ml-8 hover:text-purple-400  text-xl'>Contact</li></a>
             </ul>
           </nav>
 
@@ -152,7 +152,7 @@ export default function Home() {
 
           </div>
 
-          <div className='flex justify-center text-7xl text-pink-300 mt-10'>
+          <div className='flex justify-center text-7xl text-purple-400 mt-10'>
             <a href="https://www.instagram.com/colorbymyky/?hl=en" target="_blank">
               <AiFillInstagram/>
             </a>
@@ -164,16 +164,16 @@ export default function Home() {
           <form className='flex justify-center my-4' action='mailto:ddomyky@gmail.com' method='post' encType='text/plain'>
             <div>
 
-                <input type='text' name='name' id='name' className='shadow-lg shadow-pink-300 w-1/2 text-center h-10' placeholder='Your Name'/>
+                <input type='text' name='name' id='name' className='shadow-lg shadow-purple-400 w-1/2 text-center h-10' placeholder='Your Name'/>
 
 
-                <input type='text' name='email' id='email' className='shadow-lg shadow-pink-300 w-1/2 text-center h-10' placeholder='Email'/>
+                <input type='text' name='email' id='email' className='shadow-lg shadow-purple-400 w-1/2 text-center h-10' placeholder='Email'/>
 
 
-                <input type='text' name='inquiry' className='shadow-lg shadow-pink-300 w-full text-center h-10' placeholder='About inquiry'/>
+                <input type='text' name='inquiry' className='shadow-lg shadow-purple-400 w-full text-center h-10' placeholder='About inquiry'/>
 
 
-                <input type='submit' value='send' className='w-full text-center hover:text-pink-600 mt-5 text-xl'/>
+                <input type='submit' value='send' className='w-full text-center hover:text-purple-400 mt-5 text-xl'/>
             </div>
             
           </form>
