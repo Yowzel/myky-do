@@ -2,19 +2,21 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import myky from '../public/myky.jpeg';
 import Image from "next/legacy/image";
-import {AiFillInstagram, AiFillLinkedin} from 'react-icons/ai'
-import Instagram from './components/Instagram';
+import {AiFillInstagram, AiOutlineBars} from 'react-icons/ai'
 import hair1 from '../public/hair1.jpg';
 import hair2 from '../public/hair2.jpg';
 import hair3 from '../public/hair3.jpg';
 import hair4 from '../public/hair4.jpg';
 import hair5 from '../public/hair5.jpg';
+import React from "react";
 
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [open, setOpen] = React.useState(false);
 
 
   return (
@@ -30,22 +32,33 @@ export default function Home() {
 
         <section className='min-h-screen font-Cinzel'>
 
-          <nav className='py-10 mb-12 flex justify-between'>
+          <nav className='py-10 mb-20 flex justify-between'>
             <h1 className='text-gray-900 text-xl pr-5'>ColorByMyky</h1>
-            <ul className='flex items-center'>
-              <a href='#about'><li className='text-gray-900 hover:text-purple-400  text-xl'>About</li></a>
-              <a href='#contact'><li className='text-gray-900 px-4 ml-8 hover:text-purple-400  text-xl'>Contact</li></a>
+            <ul className='flex items-center flex-col'>
+
+              <div className='' onClick={()=>{setOpen(!open)}}>
+                <div className='text-2xl'>
+                    <AiOutlineBars/>
+                </div>
+
+                {open && <div className='w-[140px] bg-white rounded-lg text-center absolute top-20 right-5'>
+                  <ul>
+                    <a href='#about'><Dropdownitem text={"About"}/></a>
+                    <a href='#contact'><Dropdownitem text={"Contact"}/></a>
+                  </ul>
+                </div>}
+                
+              </div>
+
+              
             </ul>
           </nav>
 
 
-          <div className='flex justify-center items-center' id='about'>
+          <div className='flex justify-center items-center mt-20' id='about'>
             <div className='text-center max-w-sm mr-3'>
-              <h2 className='text-xl'>Myky Do</h2>
-              <h3 className='text-l'>Hairstylist</h3>
               <p className='leading-8 text-sm'>
-              Myky's a hair color specialist currently located in Sacramento, California.
-              Having her diploma from Federico's Beauty Institute.
+              Myky's a hairstylist currently located in Sacramento, California.
               </p>
             </div>
             <div className=''>
@@ -57,15 +70,21 @@ export default function Home() {
 
             <div className='text-center max-w-lg'>
 
-              <h3 className='text-l'>Welcome to my portfolio!</h3>
-              <h1 className='text-3xl'>Color Specialist</h1>
-              <p className='text-md'>
-              Hi there! Thank you so much for being here. Here is a little bit about me before you book! 
-              My name is Myky (pronounced Mic-key). I’m a mom to two little boys and have been engaged for 
-              five years to this man named Jordan haha. I’ve been in Sac my whole life and I’m so happy to be
-               building my business here. I’ve always love doing hair and everything beauty-related. I can’t 
-               wait to meet you in my chair and for you to walk out feeling beautiful and confident, that is my end 
-               goal! Looking forward to meeting you soon!
+              <h3 className='text-2xl'>Welcome</h3>
+              <p className='text-md mt-4'>
+                Hi there! Thank you so much for being here. Here is a little bit about me before you book! 
+                My name is Myky (pronounced Mic-key). I’m a mom to two little boys and have been engaged 
+                for over five years to this man named Jordan.  Prior to pursuing cosmetology, I went to ASU
+                and received my degree in Technological Entrepreneurship & Management. I’ve lived in Sacramento 
+                my whole life and I’m so excited to be building my business here. I’ve always had a passion for
+                doing hair and anything beauty related. <br/>
+
+                 
+              </p>
+                
+              <p className='mt-4'>
+                I can’t wait to meet you in my chair and for you to walk out feeling beautiful and confident,
+                that is my end goal! Looking forward to meeting with you soon!
               </p>
 
             </div>
@@ -98,20 +117,48 @@ export default function Home() {
 
           </div>
 
+          <div className='text-center'>
+
+            <p >
+              *All color services may vary in price depending on hair history/condition. <br/>
+
+              *For consultations via text messages, please send me: <br/>
+            </p>
+
+            <p className='text-center mt-4'>
+                
+	                ⁃	a clear photo of your current hair<br/>
+	                ⁃	hair goals <br/>
+	                ⁃	a brief hair history.  <br/>
+
+                
+            </p>
+
+            <p className='my-4'>
+              *To book I will be requiring a $50 non-refundable deposit that will go towards your appointment. <br/>
+            </p>
+
+          </div>
+
           <div className='flex flex-col text-center w-full'>
 
             <div className='mt-5'>
-              <h1 className='text-xl'>Pricing</h1>
+              <h1 className='text-xl'>Services</h1>
             </div>
 
             <div className='mt-5'>
               <h2>Babylights/Highlights</h2>
-              <p>Starting $225+</p>
+              <p>Starting $250+</p>
             </div>
 
             <div className='mt-5'>
               <h2>Balayage</h2>
               <p>Starting $225+</p>
+            </div>
+
+            <div className='mt-5'>
+              <h2>Lowlights</h2>
+              <p>Starting $175+</p>
             </div>
 
             <div className='mt-5'>
@@ -121,12 +168,12 @@ export default function Home() {
 
             <div className='mt-5'>
               <h2>Root Touch-Up (One Process)</h2>
-              <p>Starting $150+</p>
+              <p>Starting $125+</p>
             </div>
 
             <div className='mt-5'>
               <h2>One Process Color</h2>
-              <p>Starting $200+</p>
+              <p>Starting $165+</p>
             </div>
 
             <div className='mt-5'>
@@ -136,19 +183,27 @@ export default function Home() {
 
             <div className='mt-5'>
               <h2>Fashion Colors (Vivids)</h2>
-              <p>Starting $325+</p>
+              <p>Starting $350+</p>
             </div>
 
             <div className='mt-5'>
               <h2>Women's Cut</h2>
-              <p>$35</p>
+              <p>$45</p>
             </div>
 
             <div className='mt-5'>
               <h2>Men's Haircut</h2>
               <p>$25</p>
             </div>
+
+            <div className='mt-5'>
+              <h2>Blowout & Style</h2>
+              <p>$35</p>
+            </div>
             
+            <div className='mt-5 text-sm'>
+              <p>*Each additional bowl will be $15</p>
+            </div>
 
           </div>
 
@@ -164,23 +219,37 @@ export default function Home() {
           <form className='flex justify-center my-4' action='mailto:ddomyky@gmail.com' method='post' encType='text/plain'>
             <div>
 
-                <input type='text' name='name' id='name' className='shadow-lg shadow-purple-400 w-1/2 text-center h-10' placeholder='Your Name'/>
+                <input type='text' name='name' id='name' className='shadow-lg shadow-purple-300 w-1/2 text-center h-10 bg-stone-200 ' placeholder='Your Name'/>
 
 
-                <input type='text' name='email' id='email' className='shadow-lg shadow-purple-400 w-1/2 text-center h-10' placeholder='Email'/>
+                <input type='text' name='email' id='email' className='shadow-lg shadow-purple-300 w-1/2 text-center h-10 bg-stone-200' placeholder='Email'/>
 
 
-                <input type='text' name='inquiry' className='shadow-lg shadow-purple-400 w-full text-center h-10' placeholder='About inquiry'/>
+                <input type='text' name='inquiry' className='shadow-lg shadow-purple-300 w-full text-center h-10 bg-stone-200' placeholder='About inquiry'/>
 
 
-                <input type='submit' value='send' className='w-full text-center hover:text-purple-400 mt-5 text-xl'/>
+                <input type='submit' value='send' className='w-full text-center hover:text-purple-300 mt-5 text-xl'/>
             </div>
             
           </form>
 
 
         </section>
+
+        <section>
+          <footer>
+
+          </footer>
+        </section>
       </main>
     </>
   )
+}
+
+function Dropdownitem(props) {
+  return (
+    <li className=' hover:text-purple-400 border-solid border-2 border-stone-300'>
+      <a>{props.text}</a>
+    </li>
+  );
 }
