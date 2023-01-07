@@ -246,7 +246,7 @@ export default function Home() {
   )
 }
 
-function Dropdownitem(props) {
+function Dropdownitem(props: any) {
   return (
     <li className=' hover:text-purple-400 border-solid border-2 border-stone-300'>
       <a>{props.text}</a>
